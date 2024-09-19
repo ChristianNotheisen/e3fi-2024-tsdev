@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            #btnClickMe {
+                padding: 10px;
+
+            }
+
+            
+        </style>
+
+        <script>
+            let mylist = [];
+            let myObject = "";
+
+            function doSomething() {
+                addToList();
+                let innerhtml = "<ul>";
+                    mylist.forEach((item) => {
+                            innerhtml += '<li>
+                                $(item)</li>';
+
+
+                    });
+                innerhtml += "</ul>";
+                document.getElementById("helloWorld").innerHTML = innerhtml;
+
+            }
+
+            function addToList() {
+                let object
+            let value = document.getElementById("inputfield").value;
+            mylist.push(value);
+            }
+            </script>
+    </head>
+    <body>
+        <div id="helloWorld">
+            test
+        </div>
+        <button id = "btnClickMe" onclick="doSomething()">
+            klick mich
+        </button>
+        <input id = "inputfield" value = "default">
+
+             
+    </body>
+</html>
